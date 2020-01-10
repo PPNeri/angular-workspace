@@ -1,0 +1,16 @@
+<div class="row">
+    <table mdSort (mdSortChange)="sort($event)" [mdSortDisableClear]="true" class="responsive-table highlight">
+        <thead>
+            <tr>
+                <th md-sort-header="name">Espécie</th>
+                <th md-sort-header="language">Lingua</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let specie of sortedData" class="pointer-cursor" (click)="dialog(specie.url)">
+                <td>{{specie.name}}</td>
+                <td>{{specie.language}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

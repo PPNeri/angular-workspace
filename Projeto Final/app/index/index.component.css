@@ -1,0 +1,21 @@
+div {
+    
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container-box {
+  
+    height: 250px;
+  }
+  
+  .content-box {
+    
+    color: white;
+    text-align: center;
+    width: 800px;
+  }

@@ -1,0 +1,55 @@
+<sw-loading class="section--align-center" *ngIf="loading"></sw-loading>
+
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>{{ planet.name }}</sw-name>
+
+  <div class="category">
+    <!-- <p class="category__paragraph--yellow">
+      <sw-characteristics>Diameter:</sw-characteristics>
+      <input type="text">
+      {{ planet.diameter }}
+    </p> -->
+    <p  class="category__paragraph--yellow">
+      <!-- <sw-characteristics>Climate:</sw-characteristics> -->
+      Clima:
+      <input [(ngModel)]="clima" style="margin-left: 55px;" type="text">
+      <!-- {{ planet.climate }} -->
+      
+    </p>
+    <!-- <p class="category__paragraph--yellow">
+      <sw-characteristics>Gravity:</sw-characteristics>
+      <input type="text">
+      {{ planet.gravity }}
+    </p> -->
+    <p class="category__paragraph--yellow">
+      <!-- <sw-characteristics>Terrain:</sw-characteristics> -->
+      Terreno:
+      <input [(ngModel)]="terreno" style="margin-left: 40px;" type="text">
+      <!-- {{ planet.terrain }} -->
+    </p>
+    <!-- <p class="category__paragraph--yellow">
+      <sw-characteristics>Surface Water:</sw-characteristics>
+      <input type="text">
+      {{ planet.surface_water }}
+    </p> -->
+    <p class="category__paragraph--yellow">
+      <!--<sw-characteristics>Population:</sw-characteristics> -->
+      População:
+      <input [(ngModel)]="populacao" style="margin-left: 15px;" type="text">
+      <!-- {{ planet.population }} -->
+    </p>
+    <p class="category__paragraph--yellow">
+      <!-- Featured in {{ planet.films?.length }} {{planet.films?.length === 1 ? 'film' : 'films'}}. -->
+      Aparições:
+      <input [(ngModel)]="aparicoes" style="margin-left: 18px;" type="text">
+      <!-- {{ planet.films?.length }} {{planet.films?.length === 1 ? 'filmes' : 'filmes'}}. -->
+    </p>
+  </div>
+  <!-- <sw-button (click)="getRandomPlanet();">Select New Random Planet</sw-button> -->
+  <!-- <sw-button [routerLink]="['/starwars/categories']">🡠 Back to Categories</sw-button> -->
+  <sw-button (click)="getRandomPlanet();">Selecione um novo Planeta Aletório</sw-button>
+  <sw-button (click)="onSubmit();">Verificar Pontuação</sw-button>
+  <sw-button [routerLink]="['/starwars/categories']">🡠 Voltar as Categorias</sw-button>
+</section>
+
+<sw-footer></sw-footer>

@@ -1,0 +1,7 @@
+{
+ "name": "Star Wars App",
+ "short_name": "Star Wars",
+ "start_url": "/",
+ "scope": ".",
+ "display": "standalone"
+}

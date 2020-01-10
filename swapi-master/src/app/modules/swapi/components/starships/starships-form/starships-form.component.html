@@ -1,0 +1,63 @@
+<app-form-loader [loading]="loading"></app-form-loader>
+<h2 md-dialog-title class="items-title" *ngIf="!loading">
+    {{query_data.name}} <img src="./assets/images/ic_airplane.svg" class="right">
+</h2>
+<md-dialog-content>
+    <md-card *ngIf="!loading">
+        <md-card-content>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Modelo</div>
+                        <div class="right">{{query_data.model}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Fabricante</div>
+                        <div class="right">{{query_data.manufacturer}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Velocidade max. na atmosfera</div>
+                        <div class="right">{{query_data.max_atmosphering_speed}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Valor em créditos galácticos</div>
+                        <div class="right">${{query_data.cost_in_credits}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Comprimento</div>
+                        <div class="right">{{query_data.length}}mt</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Tripulação</div>
+                        <div class="right">{{query_data.crew}}</div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Qtd. max. de passageiros</div>
+                        <div class="right">{{query_data.passengers}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Hyperdrive</div>
+                        <div class="right">{{query_data.hyperdrive_rating}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">MGLT</div>
+                        <div class="right">{{query_data.MGLT}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Capacidade de carga</div>
+                        <div class="right">{{query_data.cargo_capacity}}kg</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Autonomia de reabastecimento</div>
+                        <div class="right">{{query_data.consumables}}</div>
+                    </div>
+                </div>
+            </div>
+        </md-card-content>
+    </md-card>
+</md-dialog-content>
+<md-dialog-actions class="right">
+    <button md-button [md-dialog-close]="true">Sair</button>
+</md-dialog-actions>

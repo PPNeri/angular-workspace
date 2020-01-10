@@ -1,0 +1,15 @@
+<form [formGroup]="formulario3" >
+
+    <div class="form-group mt-5">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" formControlName="nome" id="nome" readonly> 
+    </div>
+
+    <div class="form-group mt-5">
+        <label for="nome">Pontuação:</label>
+        <input type="text" class="form-control" formControlName="pontos" id="pontos" value="{{usuario.pontos[0]}}" readonly> 
+    </div>
+
+</form>
+
+<button (click)="mostrarDados()"> Mostrar Dados</button>

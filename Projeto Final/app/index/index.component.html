@@ -1,0 +1,35 @@
+<!-- <audio autoplay="true">
+    <source src="../../assets/Star Wars Theme  John Williams.mp3" type="audio/mpeg">
+</audio>
+ -->
+<div class="flex-box container-box mt-5">
+    <div><img src="../../assets/logo sw.png"></div>
+</div>
+
+<div class="flex-box container-box">
+    <div class="content-box"><h2>Let the games begin. May the force be with you!</h2></div>
+</div>
+
+<div class="flex-box container-box" style="margin-top: -10%; width: 40%; margin-left: 27%;">
+
+    <div class="input-group mb-3 col-sm">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Usuario</span>
+        </div>
+        <input [(ngModel)]="usuario.nome" type="text" class="form-control">
+    </div>
+</div>
+
+<div class="flex-box container-box" style="margin-top: -15%; width: 40%; margin-left: 27%;">
+
+    <div class="input-group mb-3 col-sm">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
+        </div>
+        <input [(ngModel)]="usuario.senha" type="password" class="form-control">
+    </div>
+</div>
+
+<div class="flex-box container-box" style="margin-top: -15%; width: 40%; margin-left: 27%;">
+    <div class="content-box"><button (click)="fazerLogin()" class="btn btn-secondary mt-2 mb-3">Login</button></div>
+</div>

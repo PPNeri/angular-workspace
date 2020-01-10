@@ -1,0 +1,66 @@
+<sw-loading class="section--align-center" *ngIf="loading"></sw-loading>
+
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>
+    🛸🌎 jedi,Aprenda sobre os planetas 🌎🛸 <br><br>
+    <!-- <select [(ngModel)]="selectedOption" class="form-control" #nome (change)="onChange(selectedOption)" id="select">
+      <option>Select padrão</option>
+      <option> {{planetas[1].name}} </option> 
+      <option *ngFor="let planeta of planet" [value]="planeta.name"> {{ planeta }} </option>
+  </select> -->
+  <!-- <button (click)="onSearch()">Carregar</button>
+    <select (change)="onChange()"> <br>
+      <option *ngFor="let item of results$ | async" [value]="item">{{ item.name }}</option>
+      <option>{{ planet.name }}</option>
+    </select> -->
+    {{ planet.name }}
+  </sw-name>
+  <div >
+    <!-- <p class="category__paragraph--yellow">
+      Nome :
+      {{ planet.name }}
+    </p> -->
+    <!-- <p class="category__paragraph--yellow">
+      <sw-characteristics>Diameter:</sw-characteristics>
+      <input type="text">
+      {{ planet.diameter }}
+    </p> -->
+    <p class="category__paragraph--yellow">
+      <!-- <sw-characteristics>Climate:</sw-characteristics> -->
+      Clima :
+      {{ planet.climate }}
+    </p>
+    <!-- <p class="category__paragraph--yellow">
+      <sw-characteristics>Gravity:</sw-characteristics>
+      <input type="text">
+      {{ planet.gravity }}
+    </p> -->
+    <p class="category__paragraph--yellow">
+      <!-- <sw-characteristics>Terrain:</sw-characteristics> -->
+      Terreno:
+      {{ planet.terrain }}
+    </p>
+    <!-- <p class="category__paragraph--yellow">
+      <sw-characteristics>Surface Water:</sw-characteristics>
+      <input type="text">
+      {{ planet.surface_water }}
+    </p> -->
+    <p class="category__paragraph--yellow">
+      <!--<sw-characteristics>Population:</sw-characteristics> -->
+      População:
+      {{ planet.population }}
+    </p>
+    <p class="category__paragraph--yellow">
+      <!-- Featured in {{ planet.films?.length }} {{planet.films?.length === 1 ? 'film' : 'films'}}. -->
+      Aparições:
+      {{ planet.films?.length }} {{planet.films?.length === 1 ? 'filmes' : 'filmes'}}.
+    </p>
+  </div>
+  <!-- <sw-button (click)="getRandomPlanet();">Select New Random Planet</sw-button> -->
+  <!-- <sw-button [routerLink]="['/starwars/categories']">🡠 Back to Categories</sw-button> -->
+  <sw-button (click)="getRandomPlanet();">Conheça um novo Planeta</sw-button>
+  <sw-button [routerLink]="['/starwars/categories']">🡠 Voltar as Categorias</sw-button>
+</section>
+
+<sw-footer></sw-footer>
+

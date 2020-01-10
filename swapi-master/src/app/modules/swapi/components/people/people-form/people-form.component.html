@@ -1,0 +1,13 @@
+<app-form-loader [loading]="loading"></app-form-loader>
+<h2 md-dialog-title class="items-title" *ngIf="!loading">
+    {{query_data.name}}
+</h2>
+<md-dialog-content>
+    <md-card *ngIf="!loading">
+        <md-card-content>
+        </md-card-content>
+    </md-card>
+</md-dialog-content>
+<md-dialog-actions class="right">
+    <button md-button [md-dialog-close]="true">Sair</button>
+</md-dialog-actions>

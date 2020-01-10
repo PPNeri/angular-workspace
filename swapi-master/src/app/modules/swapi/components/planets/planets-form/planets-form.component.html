@@ -1,0 +1,51 @@
+<app-form-loader [loading]="loading"></app-form-loader>
+<h2 md-dialog-title class="items-title" *ngIf="!loading">
+    {{query_data.name}} <img src="./assets/images/ic_earth.svg" class="right">
+</h2>
+<md-dialog-content>
+    <md-card *ngIf="!loading">
+        <md-card-content>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Diâmetro</div>
+                        <div class="right">{{query_data.diameter}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Período de rotação</div>
+                        <div class="right">{{query_data.rotation_period}}h</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Período orbital</div>
+                        <div class="right">{{query_data.orbital_period}}h</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Gravidade</div>
+                        <div class="right">{{query_data.gravity}}</div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">População</div>
+                        <div class="right">{{query_data.population}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Clima</div>
+                        <div class="right">{{query_data.climate}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Terreno</div>
+                        <div class="right">{{query_data.terrain}}</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="form-item-legend">Superfície de água</div>
+                        <div class="right">{{query_data.surface_water}}%</div>
+                    </div>
+                </div>
+            </div>
+        </md-card-content>
+    </md-card>
+</md-dialog-content>
+<md-dialog-actions class="right">
+    <button md-button [md-dialog-close]="true">Sair</button>
+</md-dialog-actions>

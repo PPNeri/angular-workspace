@@ -1,0 +1,29 @@
+
+
+<h5><p class="mt-5"> Selecione um planeta para consulta:</p></h5>
+
+
+<select [(ngModel)]="selectedOption" class="form-control" #nome (change)="onChange(selectedOption)" id="select">
+    <!-- <option>Select padrão</option> -->
+    <!-- <option> {{planetas[1].name}} </option> -->
+    <option *ngFor="let planeta of planetas" [value]="planeta.name"> {{planeta.name}} </option>
+</select>
+
+<form class="mt-5" [formGroup]="formulario2">
+    <div class="form-group">
+        <label for="nome">Nome do Planeta</label>
+        <input type="text" class="form-control" formControlName="nome" id="nome" readonly>
+    </div>
+    <div class="form-group">
+        <label for="clima">Clima</label>
+        <input type="text" class="form-control" formControlName="clima" id="clima" readonly>
+    </div>
+    <div class="form-group">
+        <label for="terreno">Terreno</label>
+        <input type="text" class="form-control" formControlName="terreno" id="terreno" readonly>
+    </div>
+    <div class="form-group">
+        <label for="qtd">Quantidade de Aparições</label>
+        <input type="text" class="form-control" formControlName="qtdA" id="qtd" readonly>
+    </div>
+</form>

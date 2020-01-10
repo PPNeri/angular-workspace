@@ -1,0 +1,19 @@
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>Login</sw-name>
+
+  <div class="category">
+    <p class="category__paragraph">
+      <label for="usuario" class="active">Usuario</label><br>
+      <input [(ngModel)]="usuario.nome" id="usuario" type="email" class="validate">
+    </p>
+    <p class="category__paragraph">
+      <label for="senha" class="active">Senha</label><br>
+      <input [(ngModel)]="usuario.senha" id="senha" type="password" class="validate">
+    </p>
+    
+  </div>
+  <!-- <sw-button type="submit" [routerLink]="['/starwars/categories']">Start</sw-button> -->
+  <sw-button type="submit"(click)="logar()">Start</sw-button>
+  <sw-button [routerLink]="['starwars']">🡠 Voltar menu</sw-button>
+</section>
+

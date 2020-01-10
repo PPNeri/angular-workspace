@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="'/'" routerLinkActive="active">Star Wars</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="mostrarMenu">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/jogo'" routerLinkActive="active">Jogo de Perguntas <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/consulta'" routerLinkActive="active">Menu de Consulta e Exibição</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/status'" routerLinkActive="active">Status</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class ="container">
+  <router-outlet></router-outlet>
+</div>
